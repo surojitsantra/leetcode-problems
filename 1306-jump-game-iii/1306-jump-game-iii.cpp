@@ -4,21 +4,17 @@ public:
         const int N = arr.size();
         
         //DFS
-        vector<bool> visited(N, false);
-        return DFS(arr, start, N, visited);
+        return DFS(arr, start, N);
     }
     
 private:
-    bool DFS(vector<int>& arr, int nodeIdx, const int N, vector<bool>& visited) {
+    bool DFS(vector<int>& arr, int nodeIdx, const int N) {
+        if(nodeIdx < 0 || nodeIdx >= N || arr[nodeIdx] == -1) return false;
         if(arr[nodeIdx] == 0) return true;
-        visited[nodeIdx] = true;
         
-        bool leftSide = false;
-        if(nodeIdx -arr[nodeIdx] >= 0 && !visited[nodeIdx -arr[nodeIdx]]) leftSide = DFS(arr, nodeIdx -arr[nodeIdx], N, visited);
+        int x = arr[nodeIdx];
+        arr[nodeIdx] = -1;
         
-        bool rightSide = false;
-        if(nodeIdx +arr[nodeIdx] < N && !visited[nodeIdx +arr[nodeIdx]]) rightSide = DFS(arr, nodeIdx +arr[nodeIdx], N, visited);
-        
-        return(leftSide || rightSide);        
+        return(DFS(arr, nodeIdx -x, N) || DFS(arr, nodeIdx +x, N));        
     }
 };
