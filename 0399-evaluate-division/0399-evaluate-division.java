@@ -31,7 +31,6 @@ class Solution {
             
             double tempValue = dfs(queryDivisor, neighborNode, value *neighborValue, graph, visited);
             if(tempValue != -1) {
-                // System.out.println("LOL"+);
                 return tempValue;
             }
         }
