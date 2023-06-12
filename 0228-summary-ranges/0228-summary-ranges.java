@@ -10,8 +10,8 @@ class Solution {
             
             while(i +1 < N && nums[i] +1 == nums[i +1]) i++;
             
-            if(start == nums[i]) ans.add(String.valueOf(start));
-            else ans.add(String.valueOf(start) + "->" + String.valueOf(nums[i]));
+            if(start == nums[i]) ans.add("" + start);
+            else ans.add("" + start + "->" + nums[i]);
         }
         
         return ans;
