@@ -24,17 +24,16 @@ public:
     
 private:
     
+    vector<int> rowMap = {-1, 1, 0, 0};
+    vector<int> colMap = {0, 0, -1, 1};
+    
     int dfs(vector<vector<int>>& grid, int r, int c, int M, int N, vector<vector<long>>& dp) {
         
         if(dp[r][c] != -1) {
             return dp[r][c];
         }
         
-        int paths = 1;
-        
-        vector<int> rowMap = {-1, 1, 0, 0};
-        vector<int> colMap = {0, 0, -1, 1};
-        
+        int paths = 1;        
         
         for(int i = 0; i < 4; i++) {
             int nRow = r +rowMap[i];
