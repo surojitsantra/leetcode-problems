@@ -43,7 +43,8 @@ private:
             if(nRow < 0 || nRow >= M || nCol < 0 || nCol >= N 
                || grid[nRow][nCol] <= grid[r][c]) continue;
             
-            paths = ((paths %MOD) + dfs(grid, nRow, nCol, M, N, dp) %MOD) %MOD;
+            paths += dfs(grid, nRow, nCol, M, N, dp) %MOD;
+            paths %= MOD;
         }
         return dp[r][c] = paths;
     }
