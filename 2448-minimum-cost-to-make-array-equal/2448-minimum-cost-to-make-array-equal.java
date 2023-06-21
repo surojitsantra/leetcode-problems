@@ -8,9 +8,6 @@ class Solution {
             high = Math.max(high, num);
         }
         
-        low--;
-        high++;
-        
         long ans = 0;
         
         while(low <= high) {
