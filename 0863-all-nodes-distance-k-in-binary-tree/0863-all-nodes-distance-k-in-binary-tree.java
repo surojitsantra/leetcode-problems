@@ -26,7 +26,10 @@ class Solution {
             while(sz-- > 0) {
                 int val = helperQueue.poll();
                 
-                if(level == k) ans.add(val);
+                if(level == k) {
+                    ans.add(val);
+                    continue;
+                }
                 
                 for(int neighbor :graph.getOrDefault(val, new ArrayList<>())) {
                     if(visited.contains(neighbor)) continue;
@@ -35,7 +38,6 @@ class Solution {
                 }
             }
             level++;
-            if(level > k) return ans;
         }
         
         return ans;        
