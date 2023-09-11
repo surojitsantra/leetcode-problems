@@ -15,8 +15,6 @@ class Solution {
             }
         }
         
-        groups.addAll(new ArrayList<>(groupMap.values()));
-        
         return groups;
     }
 }
