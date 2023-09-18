@@ -7,10 +7,7 @@ class Solution {
         
         for(int i = 0; i < mat.length; i++) {
             int[] humans = mat[i];
-            int soldiers = 0;
-            for(int human :humans) {
-                soldiers += human;
-            }
+            int soldiers = getNoOfSoldiers(humans);
             
             pq.offer(new Integer[] {i, soldiers});
         }
@@ -22,5 +19,22 @@ class Solution {
         }
         
         return ans;
+    }
+    
+    private int getNoOfSoldiers(int[] humans) {
+        int soldiers = 0;
+        
+        int low = 0, high = humans.length -1;
+        
+        while(low <= high) {
+            int mid = low +(high -low)/2;
+            if(humans[mid] == 1) {
+                soldiers = mid +1;
+                low = mid +1;
+            } else {
+                high = mid -1;
+            }
+        }
+        return soldiers;
     }
 }
