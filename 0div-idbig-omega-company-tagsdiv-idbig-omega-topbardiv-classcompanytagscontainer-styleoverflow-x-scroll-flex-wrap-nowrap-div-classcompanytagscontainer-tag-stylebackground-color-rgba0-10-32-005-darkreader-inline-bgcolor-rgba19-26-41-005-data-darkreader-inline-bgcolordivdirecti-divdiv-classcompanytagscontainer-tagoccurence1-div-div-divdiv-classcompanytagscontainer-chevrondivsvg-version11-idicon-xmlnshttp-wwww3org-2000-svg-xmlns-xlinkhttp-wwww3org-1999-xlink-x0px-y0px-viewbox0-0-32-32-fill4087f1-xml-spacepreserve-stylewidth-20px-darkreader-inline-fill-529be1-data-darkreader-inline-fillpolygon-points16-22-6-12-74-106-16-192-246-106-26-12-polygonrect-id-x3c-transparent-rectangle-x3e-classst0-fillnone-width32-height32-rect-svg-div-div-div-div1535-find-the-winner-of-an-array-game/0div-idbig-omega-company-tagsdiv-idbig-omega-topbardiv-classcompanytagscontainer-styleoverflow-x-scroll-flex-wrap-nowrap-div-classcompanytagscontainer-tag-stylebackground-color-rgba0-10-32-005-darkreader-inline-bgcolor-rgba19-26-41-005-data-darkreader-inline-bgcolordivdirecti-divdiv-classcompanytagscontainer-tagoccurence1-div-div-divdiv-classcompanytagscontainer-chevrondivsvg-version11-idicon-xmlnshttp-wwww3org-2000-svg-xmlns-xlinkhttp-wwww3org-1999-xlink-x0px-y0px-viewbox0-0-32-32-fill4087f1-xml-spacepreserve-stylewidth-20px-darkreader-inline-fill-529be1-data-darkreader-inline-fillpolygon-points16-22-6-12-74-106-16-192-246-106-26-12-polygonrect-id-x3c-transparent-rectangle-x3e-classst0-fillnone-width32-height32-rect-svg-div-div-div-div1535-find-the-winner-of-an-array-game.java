@@ -14,15 +14,13 @@ class Solution {
             
             if(firstNo > secondNo) {
                 consecutiveWinCount++;
-                j++;
             } else {
                 consecutiveWinCount = 1;
                 i = j;
-                j++;
             }
-            
             if(consecutiveWinCount == k) return Math.max(firstNo, secondNo);
             
+            j++;
         }
         
         return maxNo;
