@@ -1,22 +1,19 @@
 class Solution {
     private final int MOD = 1000_000_000 +7;
+    
     public int countHomogenous(String s) {
-        final int N = s.length();
-        
         int ans = 0;
+        int streakCount = 0;
         char ch = s.charAt(0);
-        int count = 0;
-        for(int i = 0; i < N; i++) {
-            char currCh = s.charAt(i);
+        
+        for(char currCh :s.toCharArray()) {
             if(currCh == ch) {
-                count++;
+                streakCount++;
             } else {
                 ch = currCh;
-                count = 1;
+                streakCount = 1;
             }
-            
-            ans = ((ans %MOD) +(count %MOD)) %MOD;
-            
+            ans = ((ans %MOD) +(streakCount %MOD)) %MOD;
         }
         
         return ans;
