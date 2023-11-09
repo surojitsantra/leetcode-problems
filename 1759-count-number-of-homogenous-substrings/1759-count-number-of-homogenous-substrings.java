@@ -13,7 +13,7 @@ class Solution {
                 ch = currCh;
                 streakCount = 1;
             }
-            ans = ((ans %MOD) +(streakCount %MOD)) %MOD;
+            ans = (ans +streakCount) %MOD;
         }
         
         return ans;
