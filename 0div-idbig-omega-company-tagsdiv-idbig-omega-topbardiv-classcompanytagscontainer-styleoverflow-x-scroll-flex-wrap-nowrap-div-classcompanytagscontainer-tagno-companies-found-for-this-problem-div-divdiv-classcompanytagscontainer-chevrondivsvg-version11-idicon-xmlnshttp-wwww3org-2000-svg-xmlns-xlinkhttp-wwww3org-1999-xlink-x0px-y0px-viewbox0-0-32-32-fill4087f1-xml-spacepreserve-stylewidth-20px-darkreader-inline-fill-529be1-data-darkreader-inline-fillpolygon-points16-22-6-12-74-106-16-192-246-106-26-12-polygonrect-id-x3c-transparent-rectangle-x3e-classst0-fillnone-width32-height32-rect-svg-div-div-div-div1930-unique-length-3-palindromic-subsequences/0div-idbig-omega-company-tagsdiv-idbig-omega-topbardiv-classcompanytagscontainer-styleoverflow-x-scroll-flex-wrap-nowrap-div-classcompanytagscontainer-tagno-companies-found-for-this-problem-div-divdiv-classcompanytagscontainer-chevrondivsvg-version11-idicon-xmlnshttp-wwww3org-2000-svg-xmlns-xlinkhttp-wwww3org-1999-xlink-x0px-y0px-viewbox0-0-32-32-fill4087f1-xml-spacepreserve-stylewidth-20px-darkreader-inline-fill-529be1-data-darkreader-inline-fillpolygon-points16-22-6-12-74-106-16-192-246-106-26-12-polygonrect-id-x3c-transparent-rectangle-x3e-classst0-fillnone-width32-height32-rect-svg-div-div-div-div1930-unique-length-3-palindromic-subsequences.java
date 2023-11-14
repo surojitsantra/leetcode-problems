@@ -15,14 +15,11 @@ class Solution {
         int ans = 0;
         
         for(int i = 0; i < 26; i++) {
-            char ch = (char)('a' +i);
             int start = letterPos[i][0];
             int end = letterPos[i][1];
             
             int noOfUniqueChar = findUniqueChars(s, start +1, end -1);
-            
             ans += noOfUniqueChar;
-            
         }
         
         return ans;
