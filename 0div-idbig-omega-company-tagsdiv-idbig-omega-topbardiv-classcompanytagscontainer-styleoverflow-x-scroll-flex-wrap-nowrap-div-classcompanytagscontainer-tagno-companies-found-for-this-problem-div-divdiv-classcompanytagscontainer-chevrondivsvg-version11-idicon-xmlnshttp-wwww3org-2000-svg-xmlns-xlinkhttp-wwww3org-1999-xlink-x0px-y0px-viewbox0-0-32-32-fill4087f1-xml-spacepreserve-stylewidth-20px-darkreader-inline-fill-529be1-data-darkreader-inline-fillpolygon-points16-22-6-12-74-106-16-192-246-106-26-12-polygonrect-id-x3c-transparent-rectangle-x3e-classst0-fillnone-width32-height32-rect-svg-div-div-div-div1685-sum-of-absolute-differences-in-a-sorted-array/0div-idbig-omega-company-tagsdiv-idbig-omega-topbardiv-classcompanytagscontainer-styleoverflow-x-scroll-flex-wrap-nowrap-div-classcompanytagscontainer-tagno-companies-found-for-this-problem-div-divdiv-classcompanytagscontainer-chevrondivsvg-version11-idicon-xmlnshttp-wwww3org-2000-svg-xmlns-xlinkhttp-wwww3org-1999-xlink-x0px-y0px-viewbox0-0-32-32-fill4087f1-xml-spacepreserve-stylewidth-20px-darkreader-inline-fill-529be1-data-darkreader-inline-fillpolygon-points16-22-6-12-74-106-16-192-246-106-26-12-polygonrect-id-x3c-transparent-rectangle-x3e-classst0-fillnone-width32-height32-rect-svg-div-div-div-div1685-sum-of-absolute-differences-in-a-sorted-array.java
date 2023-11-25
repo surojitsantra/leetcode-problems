@@ -9,10 +9,10 @@ class Solution {
         for(int i = 0; i < N; i++) {
             int num = nums[i];
             
-            long left = i *num;
-            long right = (N -i) *num;
+            int left = i *num;
+            int right = (N -i) *num;
             
-            res[i] = (int)((left -leftSum) + (rightSum -right));
+            res[i] = (left -leftSum) + (rightSum -right);
             leftSum += num;
             rightSum -= num;
         }
