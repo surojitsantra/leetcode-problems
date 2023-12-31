@@ -1,26 +1,18 @@
 class Solution {
     public int maxLengthBetweenEqualCharacters(String s) {
-        Pair<Integer, Integer>[] points = new Pair[26];
+        int[] firstIdx = new int[26];
+        Arrays.fill(firstIdx, -1);
+        
+        int len = -1;
         
         for(int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            int idx = ch -'a';
-            if(points[idx] == null) {
-                points[idx] = new Pair<>(i, i);
-            } else {
-                points[idx] = new Pair<>(points[idx].getKey(), i);
+            int idx = s.charAt(i) -'a';
+            if(firstIdx[idx] == -1) firstIdx[idx] = i;
+            else {
+                len = Math.max(len, i -firstIdx[idx] +1 -2);
             }
         }
         
-        int maxSubStringLen = -1;
-        
-        for(Pair<Integer, Integer> pair :points) {
-            if(pair == null) continue;
-            int start = pair.getKey();
-            int end = pair.getValue();
-            maxSubStringLen = Math.max(maxSubStringLen, (end -start) +1 -2);
-        }
-        
-        return maxSubStringLen;
+        return len;
     }
 }
