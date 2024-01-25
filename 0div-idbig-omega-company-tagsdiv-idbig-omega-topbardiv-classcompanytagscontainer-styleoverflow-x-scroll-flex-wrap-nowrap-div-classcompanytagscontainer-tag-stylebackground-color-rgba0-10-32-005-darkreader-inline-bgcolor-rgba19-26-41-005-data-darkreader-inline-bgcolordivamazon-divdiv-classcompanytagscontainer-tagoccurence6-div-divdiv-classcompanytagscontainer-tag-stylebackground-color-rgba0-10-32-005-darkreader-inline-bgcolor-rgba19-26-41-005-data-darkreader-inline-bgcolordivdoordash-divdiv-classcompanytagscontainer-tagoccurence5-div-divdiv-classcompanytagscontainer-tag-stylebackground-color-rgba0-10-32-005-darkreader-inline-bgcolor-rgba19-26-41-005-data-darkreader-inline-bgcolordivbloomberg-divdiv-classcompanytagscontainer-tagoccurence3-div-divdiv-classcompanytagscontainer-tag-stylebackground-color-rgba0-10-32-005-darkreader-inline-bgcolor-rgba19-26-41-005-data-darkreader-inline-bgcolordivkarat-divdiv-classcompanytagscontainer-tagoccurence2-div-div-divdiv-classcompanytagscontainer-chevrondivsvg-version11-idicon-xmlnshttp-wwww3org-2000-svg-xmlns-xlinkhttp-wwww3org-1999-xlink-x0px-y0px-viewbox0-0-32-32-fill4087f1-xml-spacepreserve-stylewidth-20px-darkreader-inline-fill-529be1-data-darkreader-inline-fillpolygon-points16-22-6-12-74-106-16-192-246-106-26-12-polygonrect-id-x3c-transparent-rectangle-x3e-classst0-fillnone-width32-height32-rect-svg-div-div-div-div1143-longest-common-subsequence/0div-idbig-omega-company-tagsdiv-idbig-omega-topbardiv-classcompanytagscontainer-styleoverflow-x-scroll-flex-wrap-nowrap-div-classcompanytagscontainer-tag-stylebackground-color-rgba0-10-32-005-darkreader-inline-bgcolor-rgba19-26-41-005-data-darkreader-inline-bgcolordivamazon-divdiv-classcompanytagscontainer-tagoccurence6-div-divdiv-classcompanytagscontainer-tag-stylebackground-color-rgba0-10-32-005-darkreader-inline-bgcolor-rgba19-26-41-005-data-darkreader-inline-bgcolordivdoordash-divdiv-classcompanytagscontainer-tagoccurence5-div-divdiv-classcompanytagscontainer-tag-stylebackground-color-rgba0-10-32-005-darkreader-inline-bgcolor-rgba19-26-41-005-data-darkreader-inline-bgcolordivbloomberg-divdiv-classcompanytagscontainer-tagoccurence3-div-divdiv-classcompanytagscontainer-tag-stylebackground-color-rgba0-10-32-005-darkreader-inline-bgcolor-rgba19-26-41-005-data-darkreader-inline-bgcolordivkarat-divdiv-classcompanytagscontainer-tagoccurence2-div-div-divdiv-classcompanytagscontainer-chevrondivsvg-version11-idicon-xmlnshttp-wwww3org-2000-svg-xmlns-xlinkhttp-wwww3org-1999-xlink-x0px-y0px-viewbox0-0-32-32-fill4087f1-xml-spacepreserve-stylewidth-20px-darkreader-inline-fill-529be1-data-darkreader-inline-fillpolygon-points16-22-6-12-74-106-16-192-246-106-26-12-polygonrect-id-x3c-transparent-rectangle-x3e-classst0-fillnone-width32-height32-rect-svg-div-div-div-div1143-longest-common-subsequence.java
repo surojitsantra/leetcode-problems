@@ -13,17 +13,15 @@ class Solution {
         if(i < 0 || j < 0) return 0;
         if(dp[i][j] != -1) return dp[i][j];
         
-        int match = 0;
         if(str1[i] == str2[j]) {
-            match = 1 +lcs(str1, i -1, str2, j -1, dp);
+            return dp[i][j] =  1 +lcs(str1, i -1, str2, j -1, dp);
         }
         
         int skip1 = lcs(str1, i -1, str2, j, dp);
         int skip2 = lcs(str1, i, str2, j -1, dp);
         
-        int max = Math.max(match, Math.max(skip1, skip2));
+        return dp[i][j] = Math.max(skip1, skip2);
         
-        return dp[i][j] = max;
     }
     
 }
