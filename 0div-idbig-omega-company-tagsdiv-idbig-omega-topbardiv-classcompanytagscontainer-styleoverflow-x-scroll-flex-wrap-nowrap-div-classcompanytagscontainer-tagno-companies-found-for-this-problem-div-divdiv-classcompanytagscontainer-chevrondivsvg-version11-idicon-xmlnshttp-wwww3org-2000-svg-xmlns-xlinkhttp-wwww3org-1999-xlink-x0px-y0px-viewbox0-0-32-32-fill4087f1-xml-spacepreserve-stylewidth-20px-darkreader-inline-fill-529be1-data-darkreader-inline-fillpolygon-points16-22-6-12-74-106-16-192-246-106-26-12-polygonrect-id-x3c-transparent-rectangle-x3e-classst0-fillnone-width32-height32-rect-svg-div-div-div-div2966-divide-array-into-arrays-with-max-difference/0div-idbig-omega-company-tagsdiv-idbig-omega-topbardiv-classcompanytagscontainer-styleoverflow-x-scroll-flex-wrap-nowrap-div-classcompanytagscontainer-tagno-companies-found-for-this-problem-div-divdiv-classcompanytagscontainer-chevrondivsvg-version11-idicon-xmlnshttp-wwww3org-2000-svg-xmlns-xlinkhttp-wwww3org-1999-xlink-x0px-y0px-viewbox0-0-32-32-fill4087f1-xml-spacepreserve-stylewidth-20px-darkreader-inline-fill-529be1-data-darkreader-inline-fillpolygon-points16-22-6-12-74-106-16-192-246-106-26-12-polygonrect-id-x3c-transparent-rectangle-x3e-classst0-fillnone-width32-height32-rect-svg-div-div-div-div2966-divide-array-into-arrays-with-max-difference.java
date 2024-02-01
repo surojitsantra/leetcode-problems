@@ -11,9 +11,10 @@ class Solution {
             int idx = i /3;
             if(i %3 == 0) {
                 ans[idx][0] = nums[i];
-            } else if(nums[i] -ans[idx][0] > k) return new int[0][0];
-            else {
+            } else if(nums[i] -ans[idx][0] <= k) {
                 ans[idx][i %3] = nums[i];
+            } else {
+                return new int[0][0];
             }
         }
         
