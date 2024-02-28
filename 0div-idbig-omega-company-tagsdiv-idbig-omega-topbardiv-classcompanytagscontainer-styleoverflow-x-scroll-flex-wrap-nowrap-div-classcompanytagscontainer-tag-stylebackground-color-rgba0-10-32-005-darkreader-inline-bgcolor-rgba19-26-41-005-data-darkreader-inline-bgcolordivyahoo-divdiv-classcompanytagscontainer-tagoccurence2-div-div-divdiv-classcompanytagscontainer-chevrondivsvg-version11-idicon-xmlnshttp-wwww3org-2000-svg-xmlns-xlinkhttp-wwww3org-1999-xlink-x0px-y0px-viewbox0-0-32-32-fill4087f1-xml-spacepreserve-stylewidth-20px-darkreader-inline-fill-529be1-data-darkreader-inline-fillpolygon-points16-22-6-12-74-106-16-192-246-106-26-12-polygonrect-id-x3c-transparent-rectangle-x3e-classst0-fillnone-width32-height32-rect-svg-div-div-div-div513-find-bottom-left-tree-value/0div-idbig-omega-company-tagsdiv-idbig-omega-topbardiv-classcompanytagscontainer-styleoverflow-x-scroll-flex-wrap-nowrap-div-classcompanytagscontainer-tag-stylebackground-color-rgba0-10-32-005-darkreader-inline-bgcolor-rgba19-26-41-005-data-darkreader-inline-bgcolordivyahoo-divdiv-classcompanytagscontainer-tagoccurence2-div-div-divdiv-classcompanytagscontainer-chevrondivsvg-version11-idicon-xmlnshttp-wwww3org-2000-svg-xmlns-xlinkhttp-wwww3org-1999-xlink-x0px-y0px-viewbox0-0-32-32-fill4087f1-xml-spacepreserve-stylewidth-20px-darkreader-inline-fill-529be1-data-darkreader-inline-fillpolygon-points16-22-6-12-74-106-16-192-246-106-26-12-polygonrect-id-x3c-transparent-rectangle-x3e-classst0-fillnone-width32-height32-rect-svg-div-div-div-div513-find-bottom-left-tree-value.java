@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    int tillMaxHeight = 0;
+    int tillMaxHeight = -1;
     int ans = -1;
     
     public int findBottomLeftValue(TreeNode root) {
@@ -24,9 +24,9 @@ class Solution {
     
     private void findBottomLeftMostValue(TreeNode node, int height) {
         if(node == null) return;
-        if(height +1 > tillMaxHeight) {
+        if(height > tillMaxHeight) {
             ans = node.val;
-            tillMaxHeight = height +1;
+            tillMaxHeight = height;
         }
         
         findBottomLeftMostValue(node.left, height +1);
