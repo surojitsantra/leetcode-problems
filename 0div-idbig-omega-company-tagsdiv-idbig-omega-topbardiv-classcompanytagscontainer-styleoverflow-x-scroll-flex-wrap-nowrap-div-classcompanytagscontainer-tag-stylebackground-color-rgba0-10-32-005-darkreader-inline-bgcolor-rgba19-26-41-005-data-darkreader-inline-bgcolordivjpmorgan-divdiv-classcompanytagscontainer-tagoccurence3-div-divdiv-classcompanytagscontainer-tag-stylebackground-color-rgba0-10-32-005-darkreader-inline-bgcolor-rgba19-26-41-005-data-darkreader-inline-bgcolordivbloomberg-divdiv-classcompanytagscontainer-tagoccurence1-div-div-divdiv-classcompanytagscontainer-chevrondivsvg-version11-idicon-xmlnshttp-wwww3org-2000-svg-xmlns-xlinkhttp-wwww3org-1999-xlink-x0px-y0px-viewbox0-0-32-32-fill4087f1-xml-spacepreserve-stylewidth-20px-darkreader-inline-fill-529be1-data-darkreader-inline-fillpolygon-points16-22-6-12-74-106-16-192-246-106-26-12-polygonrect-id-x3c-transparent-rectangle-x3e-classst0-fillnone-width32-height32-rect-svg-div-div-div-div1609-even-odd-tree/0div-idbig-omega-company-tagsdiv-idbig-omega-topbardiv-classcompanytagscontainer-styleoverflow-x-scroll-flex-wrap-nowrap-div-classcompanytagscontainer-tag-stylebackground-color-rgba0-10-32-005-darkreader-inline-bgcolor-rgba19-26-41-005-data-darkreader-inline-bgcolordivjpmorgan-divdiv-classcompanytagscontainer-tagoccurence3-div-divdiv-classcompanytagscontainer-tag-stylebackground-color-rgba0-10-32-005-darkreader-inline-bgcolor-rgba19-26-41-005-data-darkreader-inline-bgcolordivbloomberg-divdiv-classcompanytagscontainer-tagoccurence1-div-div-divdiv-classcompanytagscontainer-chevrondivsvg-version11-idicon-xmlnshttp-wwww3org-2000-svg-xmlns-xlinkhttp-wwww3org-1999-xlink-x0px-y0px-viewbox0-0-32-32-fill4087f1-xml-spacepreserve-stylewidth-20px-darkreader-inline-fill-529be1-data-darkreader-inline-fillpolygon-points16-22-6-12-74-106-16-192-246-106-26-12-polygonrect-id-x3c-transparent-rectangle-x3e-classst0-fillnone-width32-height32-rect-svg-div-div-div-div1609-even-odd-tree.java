@@ -17,12 +17,12 @@ class Solution {
     public boolean isEvenOddTree(TreeNode root) {
         Queue<TreeNode> helperQueue = new LinkedList<>();
         helperQueue.add(root);
-        int level = 0;
+
+        boolean evenSeries = false;
         
         while(!helperQueue.isEmpty()) {
             int sz = helperQueue.size();
-            boolean evenSeries = ((level &1) == 1);
-            int prevVal = (evenSeries)? Integer.MAX_VALUE : 0;
+            int prevVal = (evenSeries)? Integer.MAX_VALUE : Integer.MIN_VALUE;
             while(sz-- > 0) {
                 TreeNode node = helperQueue.poll();
                 int val = node.val;
@@ -35,7 +35,7 @@ class Solution {
                 if(node.right != null) helperQueue.add(node.right);
                 
             }
-            level++;
+            evenSeries = !evenSeries;
         }
         
         return true;
