@@ -15,7 +15,7 @@ class Solution {
         
         while(!maxHeap.isEmpty()) {
             int k = n +1;
-            List<Map.Entry<Character, Integer>> tempList = new ArrayList<>();
+            List<Map.Entry<Character, Integer>> tempList= new ArrayList<>();
             
             while(k > 0 && !maxHeap.isEmpty()) {
                 Map.Entry<Character, Integer> entry = maxHeap.poll();
@@ -27,9 +27,7 @@ class Solution {
                 count++;
             }
             
-            for(int i = 0; i < tempList.size(); i++) {
-                maxHeap.add(tempList.get(i));
-            }
+            maxHeap.addAll(tempList);
             
             if (maxHeap.isEmpty()) break;
             count += k;
