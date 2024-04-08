@@ -4,7 +4,7 @@ class Solution {
         int squareStudentCount = 0;
         
         for(int student :students) {
-            circularStudentCount += (-(student -1));
+            circularStudentCount += 1 -student;
             squareStudentCount += student;
         }
         
@@ -17,7 +17,7 @@ class Solution {
             }
             
             squareStudentCount -= sandwich;
-            circularStudentCount -= (-(sandwich -1));
+            circularStudentCount -= 1 -sandwich;
             
         }
         
