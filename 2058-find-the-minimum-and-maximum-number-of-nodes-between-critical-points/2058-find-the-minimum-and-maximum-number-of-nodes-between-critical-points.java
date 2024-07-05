@@ -15,7 +15,7 @@ class Solution {
         int prevPoint = -1;
         int curPoint = -1;
         int minDis = Integer.MAX_VALUE;
-        int maxDis = Integer.MAX_VALUE;
+        int maxDis = Integer.MIN_VALUE;
         
         ListNode prev = head;
         ListNode curr = head.next;
