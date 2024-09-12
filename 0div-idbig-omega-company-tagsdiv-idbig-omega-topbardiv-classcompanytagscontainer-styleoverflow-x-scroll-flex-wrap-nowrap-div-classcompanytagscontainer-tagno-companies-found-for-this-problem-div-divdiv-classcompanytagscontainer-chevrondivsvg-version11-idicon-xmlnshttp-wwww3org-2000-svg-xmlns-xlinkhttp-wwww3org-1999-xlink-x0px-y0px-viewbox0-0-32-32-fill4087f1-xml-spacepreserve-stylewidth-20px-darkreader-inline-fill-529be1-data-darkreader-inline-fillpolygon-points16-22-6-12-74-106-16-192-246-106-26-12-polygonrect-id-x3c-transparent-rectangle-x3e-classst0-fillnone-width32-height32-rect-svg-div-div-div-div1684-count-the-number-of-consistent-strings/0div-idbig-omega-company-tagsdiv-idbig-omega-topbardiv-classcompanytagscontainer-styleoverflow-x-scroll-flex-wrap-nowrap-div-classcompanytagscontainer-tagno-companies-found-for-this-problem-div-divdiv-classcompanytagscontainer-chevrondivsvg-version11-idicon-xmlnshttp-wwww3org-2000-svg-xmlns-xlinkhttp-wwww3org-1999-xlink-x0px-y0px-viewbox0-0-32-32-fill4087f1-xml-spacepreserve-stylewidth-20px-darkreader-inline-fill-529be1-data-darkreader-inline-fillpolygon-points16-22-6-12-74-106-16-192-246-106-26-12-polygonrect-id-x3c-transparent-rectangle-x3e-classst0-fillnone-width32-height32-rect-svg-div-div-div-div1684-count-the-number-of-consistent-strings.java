@@ -1,23 +1,28 @@
 class Solution {
     public int countConsistentStrings(String allowed, String[] words) {
-        Set<Character> allowedChars = new HashSet<>();
+        int mask = 0;
+        
         for(char ch :allowed.toCharArray()) {
-            allowedChars.add(ch);
+            int setBitMask = (1 <<(int)(ch -'a'));
+            mask = (mask | setBitMask);
         }
         
         int count = 0;
         for(String word :words) {
-            boolean validString = true;
+            boolean isConsistent = true;
+            
             for(char ch :word.toCharArray()) {
-                if(!allowedChars.contains(ch)) {
-                    validString = false;
+                int setBitMask = (1 <<(int)(ch -'a'));
+                if((mask & setBitMask) == 0) {
+                    isConsistent = false;
                     break;
                 }
             }
             
-            if(validString) {
+            if(isConsistent) {
                 count++;
             }
+            
         }
         
         return count;
