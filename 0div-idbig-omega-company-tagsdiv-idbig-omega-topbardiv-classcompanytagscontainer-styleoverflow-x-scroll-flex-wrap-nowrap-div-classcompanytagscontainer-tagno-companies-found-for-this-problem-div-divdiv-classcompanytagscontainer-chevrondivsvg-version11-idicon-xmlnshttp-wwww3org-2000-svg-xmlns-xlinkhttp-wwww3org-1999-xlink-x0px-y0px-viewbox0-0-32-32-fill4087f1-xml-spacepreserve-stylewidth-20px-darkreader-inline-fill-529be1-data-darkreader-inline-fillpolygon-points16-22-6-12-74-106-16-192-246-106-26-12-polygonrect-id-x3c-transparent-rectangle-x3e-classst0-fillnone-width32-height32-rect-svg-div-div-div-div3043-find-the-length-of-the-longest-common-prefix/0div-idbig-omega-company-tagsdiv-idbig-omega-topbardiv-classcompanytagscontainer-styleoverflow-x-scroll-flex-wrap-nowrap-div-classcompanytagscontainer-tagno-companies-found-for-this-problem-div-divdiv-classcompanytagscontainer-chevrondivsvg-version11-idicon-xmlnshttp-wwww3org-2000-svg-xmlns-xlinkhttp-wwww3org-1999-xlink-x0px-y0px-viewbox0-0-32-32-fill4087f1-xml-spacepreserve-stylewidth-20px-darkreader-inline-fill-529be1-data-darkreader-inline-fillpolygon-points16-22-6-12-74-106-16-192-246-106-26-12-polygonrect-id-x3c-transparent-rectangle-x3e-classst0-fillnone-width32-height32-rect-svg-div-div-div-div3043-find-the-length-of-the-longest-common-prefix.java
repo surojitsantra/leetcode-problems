@@ -1,10 +1,10 @@
+class Trie {
+    public boolean isEnd = false;
+    public Trie[] childs = new Trie[10];
+}
+    
+
 class Solution {
-    
-    class Trie {
-        public boolean isEnd = false;
-        public Trie[] childs = new Trie[10];
-    }
-    
     
     public int longestCommonPrefix(int[] arr1, int[] arr2) {
         Trie root = buildTrie(arr1);
