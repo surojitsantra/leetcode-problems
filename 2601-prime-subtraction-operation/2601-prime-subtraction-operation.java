@@ -34,7 +34,6 @@ class Solution {
             if(nums[lastPoint] <= nums[lastPoint -1]) {
                 int needToDis = nums[lastPoint -1] -nums[lastPoint] +1;
                 Integer primeNo = primeSet.ceiling(needToDis);
-                System.out.println(primeNo);
                 if(primeNo == null) {
                     return false;
                 }
