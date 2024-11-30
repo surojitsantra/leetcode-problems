@@ -14,7 +14,7 @@ class Solution {
             while(end -start +1 -maxCharCount > k) {
                 charCount[s.charAt(start) -'A']--;
                 start++;
-                maxCharCount = getMaxCount(charCount);
+                // maxCharCount = getMaxCount(charCount);
             }
             
             maxLen = Math.max(maxLen, end -start +1);
