@@ -1,13 +1,18 @@
 class Solution {
     public int jump(int[] nums) {
-        int maxICanGo = 0;
-        int jumps = 0, curEnd = 0;
-        for(int i = 0; i < nums.length -1; i++) {
-            maxICanGo = Math.max(maxICanGo, i +nums[i]);
-            if(i == curEnd) {
-                jumps++;
-                curEnd = maxICanGo;
+        final int N = nums.length;
+        int l = 0, r = 0;
+        int jumps = 0;
+        
+        while(r < N -1) {
+            int maxCanGo = 0;
+            for(int i = l; i <= r; i++) {
+                maxCanGo = Math.max(maxCanGo, i +nums[i]);
             }
+            l = r +1;
+            r = maxCanGo;
+            
+            jumps++;
         }
         
         return jumps;
