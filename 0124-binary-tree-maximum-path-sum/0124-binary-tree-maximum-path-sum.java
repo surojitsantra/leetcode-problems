@@ -15,15 +15,12 @@
  */
 class Solution {
     
-    private int maxSum = 0;
-    private int maxValue = Integer.MIN_VALUE;
+    private int maxSum = Integer.MIN_VALUE;
     
     public int maxPathSum(TreeNode root) {
-        maxSum = 0;
-        maxValue = Integer.MIN_VALUE;
+        maxSum = Integer.MIN_VALUE;
         genaratetMaxPathSum(root);
         
-        if(maxValue < 0) return maxValue;
         return maxSum;
     }
     
@@ -33,22 +30,12 @@ class Solution {
         }
         
         int currNodeVal = node.val;
-        maxValue = Math.max(maxValue, currNodeVal);
-        int leftSubtree = genaratetMaxPathSum(node.left);
-        int rightSubtree = genaratetMaxPathSum(node.right);
+        int leftSubtree = Math.max(genaratetMaxPathSum(node.left), 0);
+        int rightSubtree = Math.max(genaratetMaxPathSum(node.right), 0);
         
-        int bigger = Math.max(leftSubtree, rightSubtree);
-        
-        int currSum = 0;
-        if(bigger > 0) {
-            currSum += bigger;
-        }
-        currSum += currNodeVal;
-        
-        maxSum = Math.max(maxSum, currSum);
         maxSum = Math.max(maxSum, currNodeVal +leftSubtree +rightSubtree);
         
-        return Math.max(currSum, 0);
+        return Math.max(leftSubtree, rightSubtree) +currNodeVal;
     }
     
 }
