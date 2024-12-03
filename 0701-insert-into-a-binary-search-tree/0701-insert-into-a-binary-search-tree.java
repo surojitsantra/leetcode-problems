@@ -19,10 +19,21 @@ class Solution {
             return new TreeNode(val);
         }
         
-        if(val <= root.val) {
-            root.left = insertIntoBST(root.left, val);
+        TreeNode node = root;
+        while(node.left != null || node.right != null) {
+            if(val <= node.val) {
+                if(node.left == null) break;
+                node = node.left;
+            } else {
+                if(node.right == null) break;
+                node = node.right;
+            }
+        }
+        
+        if(val <= node.val) {
+            node.left = new TreeNode(val);
         } else {
-            root.right = insertIntoBST(root.right, val);
+            node.right = new TreeNode(val);
         }
         
         return root;
