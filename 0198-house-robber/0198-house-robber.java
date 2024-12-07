@@ -3,22 +3,17 @@ class Solution {
         final int N = nums.length;
         
         int[] dp = new int[N];
-        Arrays.fill(dp, -1);
         
-        return maxAmount(nums, N -1, dp);
+        for(int pos = 0; pos < N; pos++) {
+            int take = nums[pos] + ((pos -2 >= 0)? dp[pos -2] : 0);
+            int skip = (pos -1 >= 0)? dp[pos -1] : 0;
+            
+            dp[pos] = Math.max(take, skip);
+            
+        }
+        
+        return dp[N -1];
     }
     
-    private int maxAmount(int[] nums, int pos, int[] dp) {
-        if(pos < 0) {
-            return 0;
-        }
-        if(dp[pos] != -1) return dp[pos];
-        
-        int take = nums[pos] +maxAmount(nums, pos -2, dp);
-        int skip = maxAmount(nums, pos -1, dp);
-        
-        return dp[pos] = Math.max(take, skip);
-        
-    }
     
 }
