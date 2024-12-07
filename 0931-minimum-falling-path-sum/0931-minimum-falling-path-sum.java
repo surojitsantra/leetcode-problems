@@ -2,39 +2,40 @@ class Solution {
     public int minFallingPathSum(int[][] matrix) {
         final int N = matrix.length;
         int[][] dp = new int[N][N];
-        for(int[] d :dp) Arrays.fill(d, Integer.MAX_VALUE);
+        
+        for(int c = 0; c < N; c++) {
+            dp[0][c] = matrix[0][c];
+        }
+        
+        for(int r = 1; r < N; r++) {
+            for(int c = 0; c < N; c++) {
+        
+                int leftUp = Integer.MAX_VALUE;
+                if(c -1 >= 0) {
+                    leftUp = dp[r -1][c -1];
+                }
+
+                int up = dp[r -1][c];
+
+                int rightUp = Integer.MAX_VALUE;
+                if(c +1 < N) {
+                    rightUp = dp[r -1][c +1];
+                }
+
+                int mini = Math.min(leftUp, rightUp);
+                mini = Math.min(mini, up);
+
+                dp[r][c] = matrix[r][c] +mini;
+            }
+        }
         
         int mini = Integer.MAX_VALUE;
         for(int c = 0; c < N; c++) {
-            int x = minSum(matrix, N -1, N -c -1, N ,dp);
+            int x = dp[N -1][c];
             mini = Math.min(mini, x);
         }
         
         return mini;
-    }
-    
-    private int minSum(int[][] matrix, int r, int c, final int N, int[][] dp) {
-        if(r == 0) {
-            return matrix[r][c];
-        }
-        if(dp[r][c] != Integer.MAX_VALUE) return dp[r][c];
-        
-        int leftUp = Integer.MAX_VALUE;
-        if(c -1 >= 0) {
-            leftUp = minSum(matrix, r -1, c -1, N, dp);
-        }
-        
-        int up = minSum(matrix, r -1, c, N, dp);
-        
-        int rightUp = Integer.MAX_VALUE;
-        if(c +1 < N) {
-            rightUp = minSum(matrix, r -1, c +1, N, dp);
-        }
-        
-        int mini = Math.min(leftUp, rightUp);
-        mini = Math.min(mini, up);
-        
-        return dp[r][c] = matrix[r][c] +mini;
     }
     
 }
