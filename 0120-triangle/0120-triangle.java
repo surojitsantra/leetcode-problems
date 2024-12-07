@@ -3,30 +3,34 @@ class Solution {
         int M = triangle.size();
         int N = triangle.get(M -1).size();
         
-        int[][] dp = new int[M][N];
+        int[] down = new int[N];
         
         for(int r = M -1; r >= 0; r--) {
             N = triangle.get(r).size();
+            int[] curr = new int[N];
             
             for(int c = N -1; c >= 0; c--) {
                 int one = Integer.MAX_VALUE;
                 if(r +1 < M) {
-                    one = dp[r +1][c];
+                    one = down[c];
                 }
                 
                 int two = Integer.MAX_VALUE;
                 if(r +1 < M && c +1 < N +1) {
-                    two = dp[r +1][c +1];
+                    two = down[c +1];
                 }
                 if(one == two && one == Integer.MAX_VALUE) {
                     one = 0;
                 }
 
-                dp[r][c] = Math.min(one, two) +triangle.get(r).get(c);
+                curr[c] = Math.min(one, two) +triangle.get(r).get(c);
             }
+            
+            down = curr;
+            
         }
         
-        return dp[0][0];
+        return down[0];
     }
     
 }
