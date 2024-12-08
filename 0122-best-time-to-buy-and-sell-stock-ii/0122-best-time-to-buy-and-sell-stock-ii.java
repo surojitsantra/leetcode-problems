@@ -5,19 +5,21 @@ class Solution {
     
     private int getProfitBottomUp(int[] prices, int bag) {
         final int N = prices.length;
-        int[][] dp = new int[N +1][2];
+        int[] ahed = new int[2];
         
         //base case
-        dp[N][0] = dp[N][1] = 0;
+        ahed[0] = ahed[1] = 0;
         
         for(int day = N -1; day >= 0; day--) {
+            int[] curr = new int[2];
+            
             for(int used = 0; used <= bag; used++) {
                 int profit = 0;
 
                 //can buy?
                 for(int i = used; i < bag; i++) {
-                    int buy = dp[day +1][used +1] -prices[day];
-                    int skip = dp[day +1][used];
+                    int buy = ahed[used +1] -prices[day];
+                    int skip = ahed[used];
 
                     profit = Math.max(profit, buy);
                     profit = Math.max(profit, skip);
@@ -26,19 +28,21 @@ class Solution {
 
                 //can sell?
                 for(int i = 0; i < used; i++) {
-                    int sell = dp[day +1][used -1] +prices[day];
-                    int skip = dp[day +1][used];
+                    int sell = ahed[used -1] +prices[day];
+                    int skip = ahed[used];
 
                     profit = Math.max(profit, sell);
                     profit = Math.max(profit, skip);
 
                 }
 
-                dp[day][used] = profit;
+                curr[used] = profit;
             }
+            
+            ahed = curr;
         }
         
-        return dp[0][0];
+        return ahed[0];
     }
     
     private int profit(int[] prices, int day, int used, int bag, int[][] dp) {
