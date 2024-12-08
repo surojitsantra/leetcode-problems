@@ -1,12 +1,38 @@
 class Solution {
     public int lengthOfLIS(int[] nums) {
-        final int N = nums.length;
-        int[][] dp = new int[N +1][N +1];
         
-        for(int[] d :dp) Arrays.fill(d, -1);
-        
-        return lis(nums, N -1, N, N, dp);
+        return lisBottomUp(nums);
     }
+    
+    private int lisBottomUp(int[] nums) {
+        final int N = nums.length;
+        int[][] dp = new int[N][N +1];
+        
+        //base case
+        for(int last = 0; last <= N; last++) {
+            if(last == N || nums[0] < nums[last]) dp[0][last] = 1;
+            else dp[0][last] = 0;
+        }
+        
+        for(int pos = 1; pos < N; pos++) {
+            for(int last = N; last >= 0; last--) {
+                
+                int skip = dp[pos -1][last];
+
+                //take
+                int take = 0;
+                if(last == N || nums[pos] < nums[last]) {
+                    take = dp[pos -1][pos] +1;
+                }
+
+                dp[pos][last] = Math.max(skip, take);
+                
+            }
+        }
+        
+        return dp[N -1][N]; 
+    }
+    
     
     private int lis(int[] nums, int pos, int last, int N, int[][] dp) {
         
