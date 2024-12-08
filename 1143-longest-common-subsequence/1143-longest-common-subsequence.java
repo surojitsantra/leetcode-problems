@@ -22,9 +22,8 @@ class Solution {
         
         int firstSkip = lcs(str1, i -1, str2, j, dp);
         int secondSkip = lcs(str1, i, str2, j -1, dp);
-        int bothSkip = lcs(str1, i -1, str2, j -1, dp);
         
-        return dp[i][j] = Math.max(firstSkip, Math.max(secondSkip, bothSkip));
+        return dp[i][j] = Math.max(firstSkip, secondSkip);
         
     }
     
