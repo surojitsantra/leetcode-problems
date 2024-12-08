@@ -1,26 +1,30 @@
 class Solution {
     public int longestCommonSubsequence(String text1, String text2) {
         final int M = text1.length(), N = text2.length();
-        int[][] dp = new int[M +1][N +1];
-
-        char[] str1 = text1.toCharArray();
-        char[] str2 = text2.toCharArray();
+        int[][] dp = new int[M][N];
+        for(int[] d :dp) Arrays.fill(d, -1);
         
-        for(int i = 0; i < M; i++) {
-            for(int j = 0; j < N; j++) {
-                if(str1[i] == str2[j]) {
-                    dp[i +1][j +1] = 1 +dp[i -1 +1][j -1 +1];
-                    continue;
-                }
-
-                int firstSkip = dp[i -1 +1][j +1];
-                int secondSkip = dp[i +1][j -1 +1];
-
-                dp[i +1][j +1] = Math.max(firstSkip, secondSkip);
-            }
+        return lcs(text1.toCharArray(), M -1, text2.toCharArray(), N -1, dp);
+        
+    }
+    
+    
+    private int lcs(char[] str1, int i, char[] str2, int j, int[][] dp) {
+        
+        if(i < 0 || j < 0) {
+            return 0;
+        }
+        if(dp[i][j] != -1) return dp[i][j];
+        
+        if(str1[i] == str2[j]) {
+            return dp[i][j] = 1 +lcs(str1, i -1, str2, j -1, dp);
         }
         
-        return dp[M][N];
+        int firstSkip = lcs(str1, i -1, str2, j, dp);
+        int secondSkip = lcs(str1, i, str2, j -1, dp);
+        int bothSkip = lcs(str1, i -1, str2, j -1, dp);
+        
+        return dp[i][j] = Math.max(firstSkip, Math.max(secondSkip, bothSkip));
         
     }
     
