@@ -5,30 +5,35 @@ class Solution {
     
     private int getProfitBottomUp(int[] prices, int txn) {
         final int N = prices.length;
-        int[][][] dp = new int[N +1][2][txn +1];
+        int[][] ahed = new int[2][txn +1];
         
         for(int day = N -1; day >= 0; day--) {
+            int[][] curr = new int[2][txn +1];
+            
             for(int buy = 0; buy <= 1; buy++) {
+                
                 for(int cap = 1; cap <= txn; cap++) {
                     
                     if(buy == 1) {
-                        int take = -prices[day] +dp[day +1][0][cap];
-                        int skip = dp[day +1][1][cap];
+                        int take = -prices[day] + ahed[0][cap];
+                        int skip = ahed[1][cap];
 
-                        dp[day][buy][cap] = Math.max(take, skip);
+                        curr[buy][cap] = Math.max(take, skip);
 
                     } else {
-                        int sell = prices[day] +dp[day +1][1][cap -1];
-                        int skip = dp[day +1][0][cap];
+                        int sell = prices[day] + ahed[1][cap -1];
+                        int skip = ahed[0][cap];
 
-                        dp[day][buy][cap] = Math.max(sell, skip);
+                        curr[buy][cap] = Math.max(sell, skip);
                     }
                 
                 }
+                
             }
+            ahed = curr;
         }        
         
-        return dp[0][1][2];
+        return ahed[1][txn];
     }
     
     private int getProfit(int[] prices, int day, int buy, int cap, int N, int[][][] dp) {
