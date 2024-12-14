@@ -26,7 +26,7 @@ class Solution {
                 if(start == maxQueue.peekFirst()) {
                     maxQueue.removeFirst();
                 }
-                while(start == minQueue.peekFirst()) {
+                if(start == minQueue.peekFirst()) {
                     minQueue.removeFirst();
                 }
                 start++;
