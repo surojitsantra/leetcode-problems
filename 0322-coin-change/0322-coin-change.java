@@ -1,42 +1,36 @@
 class Solution {
     
-    private final static int MAX_NO = 1000000000;
+    private static final int BIG_NO = 1000000000;
     
     public int coinChange(int[] coins, int amount) {
         final int N = coins.length;
         
-        int[] prev = new int[amount +1];
+        int[][] dp = new int[N][amount +1];
+        for(int[] d :dp) Arrays.fill(d, -1);
         
-        //buttom up
-        //base case
+        int x = minCoin(coins, N -1, amount, dp);
+        return x == BIG_NO? -1 : x;
+    }
+    
+    private int minCoin(int[] coins, int pos, int remAmount, int[][] dp) {
         
-        for(int amt = 0; amt <= amount; amt++) {
-            if(amt %coins[0] == 0) prev[amt] = amt /coins[0];
-            else prev[amt] = MAX_NO;
+        if(remAmount == 0) {
+            return 0;
         }
-        prev[0] = 0;
+        if(pos < 0) {
+            return BIG_NO;
+        }
+        if(dp[pos][remAmount] != -1) return dp[pos][remAmount];
         
-        for(int pos = 1; pos < N; pos++) {
-            int[] curr = new int[amount +1];
-            curr[0] = 0;
-            
-            for(int amt = 1; amt <= amount; amt++) {
-                
-                int skip = prev[amt];
-                
-                int take = MAX_NO;
-                if(amt >= coins[pos]) {
-                    take = curr[amt -coins[pos]] +1;
-                }
-
-                curr[amt] = Math.min(skip, take);
-            }
-            
-            prev = curr;
+        //take currentCoin
+        int take = Integer.MAX_VALUE;
+        if(remAmount -coins[pos] >= 0) {
+            take = 1 +minCoin(coins, pos, remAmount -coins[pos], dp);
         }
         
-        int x = prev[amount];
-        return (x == MAX_NO)? -1 : x;
+        int skip = minCoin(coins, pos -1, remAmount, dp);
+        
+        return dp[pos][remAmount] = Math.min(take, skip);
     }
     
 }
