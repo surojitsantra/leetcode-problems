@@ -3,13 +3,29 @@ class Solution {
     private static final int BIG_NO = 1000000000;
     
     public int coinChange(int[] coins, int amount) {
+        
+        return minCoinBottonUp(coins, amount);
+    }
+    
+    
+    private int minCoinBottonUp(int[] coins, int amount) {
         final int N = coins.length;
-        
         int[][] dp = new int[N][amount +1];
-        for(int[] d :dp) Arrays.fill(d, -1);
         
-        int x = minCoin(coins, N -1, amount, dp);
-        return x == BIG_NO? -1 : x;
+        for(int pos = 0; pos < N; pos++) {
+            for(int remAmount = 1; remAmount <= amount; remAmount++) {
+                int take = BIG_NO;
+                if(remAmount -coins[pos] >= 0) {
+                    take = 1 +dp[pos][remAmount -coins[pos]];
+                }
+
+                int skip = (pos -1 >= 0)? dp[pos -1][remAmount] : BIG_NO;
+
+                dp[pos][remAmount] = Math.min(take, skip);
+            }
+        }
+        
+        return dp[N -1][amount] == BIG_NO? -1 : dp[N -1][amount];
     }
     
     private int minCoin(int[] coins, int pos, int remAmount, int[][] dp) {
