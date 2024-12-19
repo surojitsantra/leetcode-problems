@@ -25,36 +25,40 @@ class Solution {
     
     private int minPathSumBottomUp(int[][] matrix) {
         final int M = matrix.length, N = matrix[0].length;
-        int[][] dp = new int[M][N];
+        int[] prev = new int[N];
         
         //base case
         for(int c = 0; c < N; c++) {
-            dp[0][c] = matrix[0][c];
+            prev[c] = matrix[0][c];
         }
         
         for(int r = 1; r < M; r++) {
+            int[] curr = new int[N];
+            
             for(int c = 0; c < N; c++) {
-                int down = dp[r -1][c];
+                int down = prev[c];
                 int downLeft = MAX_VALUE;
                 if(c -1 >= 0) {
-                    downLeft = dp[r -1][c -1];
+                    downLeft = prev[c -1];
                 }
 
                 int downRight = MAX_VALUE;
                 if(c +1 < N) {
-                    downRight = dp[r -1][c +1];
+                    downRight = prev[c +1];
                 }
 
                 int minSum = Math.min(downLeft, downRight);
                 minSum = Math.min(minSum, down);
 
-                dp[r][c] = minSum +matrix[r][c];
+                curr[c] = minSum +matrix[r][c];
             }
+            
+            prev = curr;
         }
         
         int minSum = MAX_VALUE;
         for(int c = 0; c < N; c++) {
-            minSum = Math.min(minSum, dp[M -1][c]);
+            minSum = Math.min(minSum, prev[c]);
         }
         
         return minSum;
