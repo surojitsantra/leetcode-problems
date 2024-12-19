@@ -14,54 +14,37 @@
  * }
  */
 class Solution {
-    
-    private static class NodeInfo {
-        public TreeNode node;
-        public int row, col;
-        public NodeInfo(TreeNode node, int row, int col) {
-            this.node = node;
-            this.row = row;
-            this.col = col;
-        }
-    }
-    
     public List<List<Integer>> verticalTraversal(TreeNode root) {
-
-        TreeMap<Integer, TreeMap<Integer, List<Integer>>> order = new TreeMap<>();
-        generateVerticalTraversal(new NodeInfo(root, 0, 0), order);
+        TreeMap<Integer, TreeMap<Integer, List<Integer>>> orders = new TreeMap<>();
+        
+        generateVerticalTraversal(root, 0, 0, orders);
         
         List<List<Integer>> ans = new ArrayList<>();
-        
-        for(TreeMap<Integer, List<Integer>> mp :order.values()) {
-            List<Integer> list = new ArrayList<>();
-            for(List<Integer> nums :mp.values()) {
-                Collections.sort(nums);
-                list.addAll(nums);
+        for(TreeMap<Integer, List<Integer>> rowValues :orders.values()) {
+            
+            List<Integer> cols = new ArrayList<>();
+            for(List<Integer> values :rowValues.values()) {
+                Collections.sort(values);
+                cols.addAll(values);
             }
-            ans.add(list);
+            
+            ans.add(cols);
         }
         
         return ans;
-        
     }
     
-    private void generateVerticalTraversal(NodeInfo nodeInfo, 
-                                           TreeMap<Integer, TreeMap<Integer, List<Integer>>> order) {
-        if(nodeInfo.node == null) {
-            return;
-        }
+    private void generateVerticalTraversal(TreeNode node, int row, int col,
+                                          TreeMap<Integer, TreeMap<Integer, List<Integer>>> orders) {
         
-        TreeNode node = nodeInfo.node;
-        int row = nodeInfo.row;
-        int col = nodeInfo.col;
+        if(node == null) return;
+        orders.putIfAbsent(col, new TreeMap<>());
+        orders.get(col).putIfAbsent(row, new ArrayList<>());
         
-        order.putIfAbsent(col, new TreeMap<>());
-        order.get(col).putIfAbsent(row, new ArrayList<>());
-        order.get(col).get(row).add(node.val);
+        orders.get(col).get(row).add(node.val);
         
-        generateVerticalTraversal(new NodeInfo(node.left, row +1,col -1), order);
-        generateVerticalTraversal(new NodeInfo(node.right, row +1, col +1), order);
-        
+        generateVerticalTraversal(node.left, row +1, col -1, orders);
+        generateVerticalTraversal(node.right, row +1, col +1, orders);
     }
     
 }
