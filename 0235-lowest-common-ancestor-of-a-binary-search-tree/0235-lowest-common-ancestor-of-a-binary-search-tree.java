@@ -9,27 +9,28 @@
  */
 
 class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if(root == null) {
-            return null;
-        }
-        int val = root.val;
-        int pVal = p.val;
-        int qVal = q.val;
+    public TreeNode lowestCommonAncestor(TreeNode node, TreeNode p, TreeNode q) {
+        if(node == null) return null;
         
-        if(val == pVal) {
-            return p;
-        }
-        if(val == qVal) {
-            return q;
-        }
-        if(Math.min(pVal, qVal) <= val && val <= Math.max(pVal, qVal)) {
-            return root;
-        } else if(Math.min(pVal, qVal) > val) {
-            return lowestCommonAncestor(root.right, p, q);
-        } else {
-            return lowestCommonAncestor(root.left, p, q);
+        if(node == p || node == q) {
+            return node;
         }
         
+        if(Math.max(p.val, q.val) < node.val) {
+            return lowestCommonAncestor(node.left, p, q);
+        }
+        if(Math.min(p.val, q.val) > node.val) {
+            return lowestCommonAncestor(node.right, p, q);
+        }
+        
+        TreeNode left = lowestCommonAncestor(node.left, p, q);
+        TreeNode right = lowestCommonAncestor(node.right, p, q);
+        
+        if(left != null && right != null) {
+            return node;
+        }
+        if(left != null) return left;
+        else return right;
     }
+    
 }
