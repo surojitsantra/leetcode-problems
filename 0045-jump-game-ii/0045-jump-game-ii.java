@@ -1,20 +1,45 @@
 class Solution {
+    private static final int BIG_NO = 1000000000;
+    
     public int jump(int[] nums) {
-        final int N = nums.length;
-        int l = 0, r = 0;
-        int jumps = 0;
+        return minJump(nums);
+    }
+    
+    private int minJump(int[] nums) {
         
-        while(r < N -1) {
-            int maxCanGo = 0;
-            for(int i = l; i <= r; i++) {
-                maxCanGo = Math.max(maxCanGo, i +nums[i]);
-            }
-            l = r +1;
-            r = maxCanGo;
+        final int N = nums.length;
+        int[] dp = new int[N];
+        
+        for(int pos = N -2; pos >= 0; pos--) {
             
-            jumps++;
+            int minCost = BIG_NO;
+            for(int k = pos +1; k <= pos +nums[pos]; k++) {
+                int cost = (k >= 0 && k < N)? dp[k] : 0;
+                cost += 1;
+                
+                minCost = Math.min(minCost, cost);
+            }
+
+            dp[pos] = minCost;
         }
         
-        return jumps;
+        return dp[0];
+        
+//         if(pos >= nums.length -1) {
+//             return 0;
+//         }
+//         // if(nums[pos] == 0) {
+//         //     return BIG_NO;
+//         // }
+        
+//         int minCost = BIG_NO;
+//         for(int k = pos +1; k <= pos +nums[pos]; k++) {
+//             int cost = 1 +minJump(nums, k);
+//             minCost = Math.min(minCost, cost);
+            
+//         }
+        
+//         return minCost;
     }
+    
 }
