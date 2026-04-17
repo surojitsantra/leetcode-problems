@@ -2,34 +2,24 @@ class Solution {
     public boolean isNStraightHand(int[] hand, int groupSize) {
         final int N = hand.length;
         if(N %groupSize != 0) return false;
-        
-        int group = N /groupSize;
-        
-        NavigableMap<Integer, Integer> numsFreq = new TreeMap<>();
-        for(int num :hand) {
-            numsFreq.put(num, numsFreq.getOrDefault(num, 0) +1);
+
+        TreeMap<Integer, Integer> numsFreq = new TreeMap<>();
+
+        for (int x :hand) {
+            numsFreq.put(x, numsFreq.getOrDefault(x, 0) +1);
         }
-        
-        while(group-- > 0 && !numsFreq.isEmpty()) {
-            int currNum = -1;
-            int sz = groupSize;
-            
-            while(sz-- > 0 && !numsFreq.isEmpty()) {
-                Integer nextNum = numsFreq.ceilingKey(currNum +1);
-                if(nextNum == null || (currNum != -1 && currNum +1 != nextNum)) {
-                    return false;
-                }
-                
-                numsFreq.put(nextNum, numsFreq.getOrDefault(nextNum, 0) -1);
-                if(numsFreq.get(nextNum) == 0) {
-                    numsFreq.remove(nextNum);
-                }
-                
-                currNum = nextNum;
+
+        while(!numsFreq.isEmpty()) {
+            int key = numsFreq.firstKey();
+            for(int i = 0; i < groupSize; i++) {
+                int next = key +i;
+                if(!numsFreq.containsKey(next)) return false;
+                numsFreq.put(next, numsFreq.get(next) -1);
+                if(numsFreq.get(next) == 0) numsFreq.remove(next);
             }
-            if(sz > 0) return false;
         }
-        
-        return (group <= 0);
+
+        return true;
+
     }
 }
