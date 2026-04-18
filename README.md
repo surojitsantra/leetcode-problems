@@ -13,6 +13,7 @@
 | [1146-snapshot-array](https://github.com/surojitsantra/leetcode-problems/tree/main/1146-snapshot-array/) | Medium |
 | [1296-divide-array-in-sets-of-k-consecutive-numbers](https://github.com/surojitsantra/leetcode-problems/tree/main/1296-divide-array-in-sets-of-k-consecutive-numbers/) | Medium |
 | [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/surojitsantra/leetcode-problems/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
+| [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -30,6 +31,7 @@
 | [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
 | [1146-snapshot-array](https://github.com/surojitsantra/leetcode-problems/tree/main/1146-snapshot-array/) | Medium |
 | [1296-divide-array-in-sets-of-k-consecutive-numbers](https://github.com/surojitsantra/leetcode-problems/tree/main/1296-divide-array-in-sets-of-k-consecutive-numbers/) | Medium |
+| [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -55,6 +57,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/surojitsantra/leetcode-problems/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
+| [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
 ## Ordered Set
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -88,6 +91,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1146-snapshot-array](https://github.com/surojitsantra/leetcode-problems/tree/main/1146-snapshot-array/) | Medium |
+| [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -104,4 +108,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0809-expressive-words](https://github.com/surojitsantra/leetcode-problems/tree/main/0809-expressive-words/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
 <!---LeetCode Topics End-->
