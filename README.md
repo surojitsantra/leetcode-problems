@@ -6,6 +6,7 @@
 | ------- | ------- |
 | [0659-split-array-into-consecutive-subsequences](https://github.com/surojitsantra/leetcode-problems/tree/main/0659-split-array-into-consecutive-subsequences/) | Medium |
 | [0752-open-the-lock](https://github.com/surojitsantra/leetcode-problems/tree/main/0752-open-the-lock/) | Medium |
+| [0809-expressive-words](https://github.com/surojitsantra/leetcode-problems/tree/main/0809-expressive-words/) | Medium |
 | [0846-hand-of-straights](https://github.com/surojitsantra/leetcode-problems/tree/main/0846-hand-of-straights/) | Medium |
 | [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
 | [0946-validate-stack-sequences](https://github.com/surojitsantra/leetcode-problems/tree/main/0946-validate-stack-sequences/) | Medium |
@@ -62,6 +63,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0752-open-the-lock](https://github.com/surojitsantra/leetcode-problems/tree/main/0752-open-the-lock/) | Medium |
+| [0809-expressive-words](https://github.com/surojitsantra/leetcode-problems/tree/main/0809-expressive-words/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -94,4 +96,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
+## Two Pointers
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0809-expressive-words](https://github.com/surojitsantra/leetcode-problems/tree/main/0809-expressive-words/) | Medium |
 <!---LeetCode Topics End-->
