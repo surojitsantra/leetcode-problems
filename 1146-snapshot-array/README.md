@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/snapshot-array/">1146. Snapshot Array</a></h2><h3>Medium</h3><hr><div><p>Implement a SnapshotArray that supports the following interface:</p>
+<h2><a href="https://leetcode.com/problems/snapshot-array/">1146. Snapshot Array</a></h2><h3>Medium</h3><hr><p>Implement a SnapshotArray that supports the following interface:</p>
 
 <ul>
 	<li><code>SnapshotArray(int length)</code> initializes an array-like data structure with the given length. <strong>Initially, each element equals 0</strong>.</li>
@@ -10,7 +10,8 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> ["SnapshotArray","set","snap","set","get"]
+<pre>
+<strong>Input:</strong> [&quot;SnapshotArray&quot;,&quot;set&quot;,&quot;snap&quot;,&quot;set&quot;,&quot;get&quot;]
 [[3],[0,5],[],[0,6],[0,0]]
 <strong>Output:</strong> [null,null,0,null,5]
 <strong>Explanation: </strong>
@@ -30,4 +31,3 @@ snapshotArr.get(0,0);  // Get the value of array[0] with snap_id = 0, return 5</
 	<li><code>0 &lt;= snap_id &lt; </code>(the total number of times we call <code>snap()</code>)</li>
 	<li>At most <code>5 * 10<sup>4</sup></code> calls will be made to <code>set</code>, <code>snap</code>, and <code>get</code>.</li>
 </ul>
-</div>
