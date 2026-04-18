@@ -1,31 +1,29 @@
 class SnapshotArray {
-    
-    private List<TreeMap<Integer, Integer>> numbers;
-    
-    private int snap;
+    private int curSnap;
+
+    private TreeMap<Integer, Integer>[] reference;
 
     public SnapshotArray(int length) {
-        snap = 0;
-        numbers = new ArrayList<>();
+        curSnap = 0;
+        reference = new TreeMap[length];
         for(int i = 0; i < length; i++) {
-            TreeMap<Integer, Integer> mp = new TreeMap<>();
-            mp.put(0, 0);
-            numbers.add(mp);
+            reference[i] = new TreeMap<>();
+            reference[i].put(0, 0);
         }
     }
     
     public void set(int index, int val) {
-        Map<Integer, Integer> allNos = numbers.get(index);
-        allNos.put(snap, val);
+        TreeMap<Integer, Integer> currPoint = reference[index];
+        currPoint.put(curSnap, val);
     }
     
     public int snap() {
-        return snap++;
-        
+        return curSnap++;
     }
     
     public int get(int index, int snap_id) {
-        return numbers.get(index).floorEntry(snap_id).getValue();
+        TreeMap<Integer, Integer> currPoint = reference[index];
+        return currPoint.floorEntry(snap_id).getValue();
     }
 }
 
