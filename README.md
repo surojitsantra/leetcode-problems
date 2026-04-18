@@ -7,6 +7,7 @@
 | [0659-split-array-into-consecutive-subsequences](https://github.com/surojitsantra/leetcode-problems/tree/main/0659-split-array-into-consecutive-subsequences/) | Medium |
 | [0752-open-the-lock](https://github.com/surojitsantra/leetcode-problems/tree/main/0752-open-the-lock/) | Medium |
 | [0846-hand-of-straights](https://github.com/surojitsantra/leetcode-problems/tree/main/0846-hand-of-straights/) | Medium |
+| [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
 | [0946-validate-stack-sequences](https://github.com/surojitsantra/leetcode-problems/tree/main/0946-validate-stack-sequences/) | Medium |
 | [1146-snapshot-array](https://github.com/surojitsantra/leetcode-problems/tree/main/1146-snapshot-array/) | Medium |
 | [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/surojitsantra/leetcode-problems/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
@@ -24,6 +25,7 @@
 | [0659-split-array-into-consecutive-subsequences](https://github.com/surojitsantra/leetcode-problems/tree/main/0659-split-array-into-consecutive-subsequences/) | Medium |
 | [0752-open-the-lock](https://github.com/surojitsantra/leetcode-problems/tree/main/0752-open-the-lock/) | Medium |
 | [0846-hand-of-straights](https://github.com/surojitsantra/leetcode-problems/tree/main/0846-hand-of-straights/) | Medium |
+| [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
 | [1146-snapshot-array](https://github.com/surojitsantra/leetcode-problems/tree/main/1146-snapshot-array/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
@@ -39,6 +41,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0846-hand-of-straights](https://github.com/surojitsantra/leetcode-problems/tree/main/0846-hand-of-straights/) | Medium |
+| [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
 ## Queue
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -83,4 +86,12 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1146-snapshot-array](https://github.com/surojitsantra/leetcode-problems/tree/main/1146-snapshot-array/) | Medium |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
+## Geometry
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
 <!---LeetCode Topics End-->
