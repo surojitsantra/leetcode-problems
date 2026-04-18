@@ -61,4 +61,16 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0752-open-the-lock](https://github.com/surojitsantra/leetcode-problems/tree/main/0752-open-the-lock/) | Medium |
+## Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0951-flip-equivalent-binary-trees](https://github.com/surojitsantra/leetcode-problems/tree/main/0951-flip-equivalent-binary-trees/) | Medium |
+## Depth-First Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0951-flip-equivalent-binary-trees](https://github.com/surojitsantra/leetcode-problems/tree/main/0951-flip-equivalent-binary-trees/) | Medium |
+## Binary Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0951-flip-equivalent-binary-trees](https://github.com/surojitsantra/leetcode-problems/tree/main/0951-flip-equivalent-binary-trees/) | Medium |
 <!---LeetCode Topics End-->
