@@ -4,6 +4,7 @@
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0354-russian-doll-envelopes](https://github.com/surojitsantra/leetcode-problems/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0659-split-array-into-consecutive-subsequences](https://github.com/surojitsantra/leetcode-problems/tree/main/0659-split-array-into-consecutive-subsequences/) | Medium |
 | [0752-open-the-lock](https://github.com/surojitsantra/leetcode-problems/tree/main/0752-open-the-lock/) | Medium |
 | [0809-expressive-words](https://github.com/surojitsantra/leetcode-problems/tree/main/0809-expressive-words/) | Medium |
@@ -48,6 +49,7 @@
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0354-russian-doll-envelopes](https://github.com/surojitsantra/leetcode-problems/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0846-hand-of-straights](https://github.com/surojitsantra/leetcode-problems/tree/main/0846-hand-of-straights/) | Medium |
 | [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
 | [1296-divide-array-in-sets-of-k-consecutive-numbers](https://github.com/surojitsantra/leetcode-problems/tree/main/1296-divide-array-in-sets-of-k-consecutive-numbers/) | Medium |
@@ -93,6 +95,7 @@
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0354-russian-doll-envelopes](https://github.com/surojitsantra/leetcode-problems/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [1146-snapshot-array](https://github.com/surojitsantra/leetcode-problems/tree/main/1146-snapshot-array/) | Medium |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
 ## Design
@@ -114,6 +117,7 @@
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0354-russian-doll-envelopes](https://github.com/surojitsantra/leetcode-problems/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
