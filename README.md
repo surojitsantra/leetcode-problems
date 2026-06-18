@@ -109,6 +109,7 @@
 | ------- | ------- |
 | [0843-guess-the-word](https://github.com/surojitsantra/leetcode-problems/tree/main/0843-guess-the-word/) | Hard |
 | [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
+| [1344-angle-between-hands-of-a-clock](https://github.com/surojitsantra/leetcode-problems/tree/main/1344-angle-between-hands-of-a-clock/) | Medium |
 ## Geometry
 | Problem Name | Difficulty |
 | ------- | ------- |
