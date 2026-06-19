@@ -17,6 +17,7 @@
 | [1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/surojitsantra/leetcode-problems/tree/main/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) | Hard |
 | [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/surojitsantra/leetcode-problems/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
+| [1732-find-the-highest-altitude](https://github.com/surojitsantra/leetcode-problems/tree/main/1732-find-the-highest-altitude/) | Easy |
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -143,4 +144,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0843-guess-the-word](https://github.com/surojitsantra/leetcode-problems/tree/main/0843-guess-the-word/) | Hard |
+## Prefix Sum
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1732-find-the-highest-altitude](https://github.com/surojitsantra/leetcode-problems/tree/main/1732-find-the-highest-altitude/) | Easy |
 <!---LeetCode Topics End-->
