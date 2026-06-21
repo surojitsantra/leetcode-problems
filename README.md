@@ -18,6 +18,7 @@
 | [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/surojitsantra/leetcode-problems/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
 | [1732-find-the-highest-altitude](https://github.com/surojitsantra/leetcode-problems/tree/main/1732-find-the-highest-altitude/) | Easy |
+| [1833-maximum-ice-cream-bars](https://github.com/surojitsantra/leetcode-problems/tree/main/1833-maximum-ice-cream-bars/) | Medium |
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -42,6 +43,7 @@
 | [0659-split-array-into-consecutive-subsequences](https://github.com/surojitsantra/leetcode-problems/tree/main/0659-split-array-into-consecutive-subsequences/) | Medium |
 | [0846-hand-of-straights](https://github.com/surojitsantra/leetcode-problems/tree/main/0846-hand-of-straights/) | Medium |
 | [1296-divide-array-in-sets-of-k-consecutive-numbers](https://github.com/surojitsantra/leetcode-problems/tree/main/1296-divide-array-in-sets-of-k-consecutive-numbers/) | Medium |
+| [1833-maximum-ice-cream-bars](https://github.com/surojitsantra/leetcode-problems/tree/main/1833-maximum-ice-cream-bars/) | Medium |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -55,6 +57,7 @@
 | [0846-hand-of-straights](https://github.com/surojitsantra/leetcode-problems/tree/main/0846-hand-of-straights/) | Medium |
 | [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
 | [1296-divide-array-in-sets-of-k-consecutive-numbers](https://github.com/surojitsantra/leetcode-problems/tree/main/1296-divide-array-in-sets-of-k-consecutive-numbers/) | Medium |
+| [1833-maximum-ice-cream-bars](https://github.com/surojitsantra/leetcode-problems/tree/main/1833-maximum-ice-cream-bars/) | Medium |
 ## Queue
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -148,4 +151,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1732-find-the-highest-altitude](https://github.com/surojitsantra/leetcode-problems/tree/main/1732-find-the-highest-altitude/) | Easy |
+## Counting Sort
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1833-maximum-ice-cream-bars](https://github.com/surojitsantra/leetcode-problems/tree/main/1833-maximum-ice-cream-bars/) | Medium |
 <!---LeetCode Topics End-->
