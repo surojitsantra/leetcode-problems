@@ -35,6 +35,7 @@
 | [0846-hand-of-straights](https://github.com/surojitsantra/leetcode-problems/tree/main/0846-hand-of-straights/) | Medium |
 | [0939-minimum-area-rectangle](https://github.com/surojitsantra/leetcode-problems/tree/main/0939-minimum-area-rectangle/) | Medium |
 | [1146-snapshot-array](https://github.com/surojitsantra/leetcode-problems/tree/main/1146-snapshot-array/) | Medium |
+| [1189-maximum-number-of-balloons](https://github.com/surojitsantra/leetcode-problems/tree/main/1189-maximum-number-of-balloons/) | Easy |
 | [1296-divide-array-in-sets-of-k-consecutive-numbers](https://github.com/surojitsantra/leetcode-problems/tree/main/1296-divide-array-in-sets-of-k-consecutive-numbers/) | Medium |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
 ## Greedy
@@ -81,6 +82,7 @@
 | [0752-open-the-lock](https://github.com/surojitsantra/leetcode-problems/tree/main/0752-open-the-lock/) | Medium |
 | [0809-expressive-words](https://github.com/surojitsantra/leetcode-problems/tree/main/0809-expressive-words/) | Medium |
 | [0843-guess-the-word](https://github.com/surojitsantra/leetcode-problems/tree/main/0843-guess-the-word/) | Hard |
+| [1189-maximum-number-of-balloons](https://github.com/surojitsantra/leetcode-problems/tree/main/1189-maximum-number-of-balloons/) | Easy |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -154,5 +156,6 @@
 ## Counting Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1189-maximum-number-of-balloons](https://github.com/surojitsantra/leetcode-problems/tree/main/1189-maximum-number-of-balloons/) | Easy |
 | [1833-maximum-ice-cream-bars](https://github.com/surojitsantra/leetcode-problems/tree/main/1833-maximum-ice-cream-bars/) | Medium |
 <!---LeetCode Topics End-->
