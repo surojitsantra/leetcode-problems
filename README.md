@@ -129,6 +129,7 @@
 | ------- | ------- |
 | [0354-russian-doll-envelopes](https://github.com/surojitsantra/leetcode-problems/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
+| [3699-number-of-zigzag-arrays-i](https://github.com/surojitsantra/leetcode-problems/tree/main/3699-number-of-zigzag-arrays-i/) | Hard |
 ## Graph Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -153,6 +154,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1732-find-the-highest-altitude](https://github.com/surojitsantra/leetcode-problems/tree/main/1732-find-the-highest-altitude/) | Easy |
+| [3699-number-of-zigzag-arrays-i](https://github.com/surojitsantra/leetcode-problems/tree/main/3699-number-of-zigzag-arrays-i/) | Hard |
 ## Counting Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
