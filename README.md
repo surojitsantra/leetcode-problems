@@ -19,6 +19,7 @@
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
 | [1732-find-the-highest-altitude](https://github.com/surojitsantra/leetcode-problems/tree/main/1732-find-the-highest-altitude/) | Easy |
 | [1833-maximum-ice-cream-bars](https://github.com/surojitsantra/leetcode-problems/tree/main/1833-maximum-ice-cream-bars/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/surojitsantra/leetcode-problems/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -38,6 +39,7 @@
 | [1189-maximum-number-of-balloons](https://github.com/surojitsantra/leetcode-problems/tree/main/1189-maximum-number-of-balloons/) | Easy |
 | [1296-divide-array-in-sets-of-k-consecutive-numbers](https://github.com/surojitsantra/leetcode-problems/tree/main/1296-divide-array-in-sets-of-k-consecutive-numbers/) | Medium |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/surojitsantra/leetcode-problems/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -155,9 +157,22 @@
 | ------- | ------- |
 | [1732-find-the-highest-altitude](https://github.com/surojitsantra/leetcode-problems/tree/main/1732-find-the-highest-altitude/) | Easy |
 | [3699-number-of-zigzag-arrays-i](https://github.com/surojitsantra/leetcode-problems/tree/main/3699-number-of-zigzag-arrays-i/) | Hard |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/surojitsantra/leetcode-problems/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 ## Counting Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1189-maximum-number-of-balloons](https://github.com/surojitsantra/leetcode-problems/tree/main/1189-maximum-number-of-balloons/) | Easy |
 | [1833-maximum-ice-cream-bars](https://github.com/surojitsantra/leetcode-problems/tree/main/1833-maximum-ice-cream-bars/) | Medium |
+## Divide and Conquer
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/surojitsantra/leetcode-problems/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
+## Segment Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/surojitsantra/leetcode-problems/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
+## Merge Sort
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/surojitsantra/leetcode-problems/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 <!---LeetCode Topics End-->
