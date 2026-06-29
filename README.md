@@ -19,6 +19,7 @@
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/surojitsantra/leetcode-problems/tree/main/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum/) | Medium |
 | [1732-find-the-highest-altitude](https://github.com/surojitsantra/leetcode-problems/tree/main/1732-find-the-highest-altitude/) | Easy |
 | [1833-maximum-ice-cream-bars](https://github.com/surojitsantra/leetcode-problems/tree/main/1833-maximum-ice-cream-bars/) | Medium |
+| [1967-number-of-strings-that-appear-as-substrings-in-word](https://github.com/surojitsantra/leetcode-problems/tree/main/1967-number-of-strings-that-appear-as-substrings-in-word/) | Easy |
 | [3020-find-the-maximum-number-of-elements-in-subset](https://github.com/surojitsantra/leetcode-problems/tree/main/3020-find-the-maximum-number-of-elements-in-subset/) | Medium |
 | [3739-count-subarrays-with-majority-element-ii](https://github.com/surojitsantra/leetcode-problems/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 ## Stack
@@ -87,6 +88,7 @@
 | [0809-expressive-words](https://github.com/surojitsantra/leetcode-problems/tree/main/0809-expressive-words/) | Medium |
 | [0843-guess-the-word](https://github.com/surojitsantra/leetcode-problems/tree/main/0843-guess-the-word/) | Hard |
 | [1189-maximum-number-of-balloons](https://github.com/surojitsantra/leetcode-problems/tree/main/1189-maximum-number-of-balloons/) | Easy |
+| [1967-number-of-strings-that-appear-as-substrings-in-word](https://github.com/surojitsantra/leetcode-problems/tree/main/1967-number-of-strings-that-appear-as-substrings-in-word/) | Easy |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
